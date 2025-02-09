@@ -8,9 +8,9 @@ function App() {
       <header className="relative h-screen flex items-center">
         <div className="absolute inset-0">
           <picture>
-            <source srcSet="../public/assets/images/law-office.jpg" type="image/jpeg" />
+            <source srcSet="/assets/images/law-office.jpg" type="image/jpeg" />
             <img
-              src="https://github.com/osmanbastos/lawyer_landing/blob/main/public/assets/images/law-office.jpg?raw=true"
+              src="/assets/images/law-office.jpg"
               alt="Law Office"
               className="w-full h-full object-cover"
             />
@@ -95,9 +95,9 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <picture>
-                <source srcSet="../public/assets/images/olimpio_lawyer.png" type="image/png" />
+                <source srcSet="../assets/images/olimpio_lawyer.png" type="image/png" />
                 <img
-                  src="https://github.com/osmanbastos/lawyer_landing/blob/main/public/assets/images/olimpio_lawyer.png?raw=true"
+                  src="/assets/images/olimpio_lawyer.png"
                   alt="Olímpio Mello Lawyer"
                   className="w-full h-full object-cover"
                 />
