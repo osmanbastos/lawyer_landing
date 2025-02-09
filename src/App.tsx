@@ -7,18 +7,22 @@ function App() {
       {/* Hero Section */}
       <header className="relative h-screen flex items-center">
         <div className="absolute inset-0">
-          <img
-            src="/assets/background.avif"
-            alt="Law Office"
-            className="w-full h-full object-cover"
-          />
+          <picture>
+            <source srcSet="../public/assets/images/law-office.avif" type="image/avif" />
+            <source srcSet="../public/assets/images/law-office.jpg" type="image/jpeg" />
+            <img
+              src="../public/assets/images/law-office.jpg"
+              alt="Law Office"
+              className="w-full h-full object-cover"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gray-900/70"></div>
         </div>
         
         <div className="relative container mx-auto px-6">
-          <nav className="absolute top-0 left-0 right-0 py-6">
+          <nav className="fixed top-0 left-6 right-6 py-6 z-50">
             <div className="flex justify-between items-center">
-              <h1 className="text-white text-2xl font-bold">ANDERSON LAW</h1>
+              <h1 className="text-white text-2xl font-bold">BIG FAT LAW</h1>
               <div className="hidden md:flex space-x-8">
                 <a href="#services" className="text-white hover:text-gray-300">Services</a>
                 <a href="#about" className="text-white hover:text-gray-300">About</a>
@@ -57,7 +61,7 @@ function App() {
             </div>
             <div>
               <p className="text-4xl font-bold mb-2">98%</p>
-              <p className="text-lg">Client Satisfaction</p>
+              <p className="text-lg">Client Sexual Satisfaction</p>
             </div>
           </div>
         </div>
@@ -91,22 +95,26 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <img
-                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80"
-                alt="Senior Lawyer"
-                className="rounded-lg shadow-lg"
-              />
+              <picture>
+                <source srcSet="../public/assets/images/olimpio_lawyer.png" type="image/png" />
+                <img
+                  src="../public/assets/images/olimpio_lawyer.png"
+                  alt="Olímpio MelloLawyer"
+                  className="w-full h-full object-cover"
+                />
+              </picture>
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-6">About James Anderson</h2>
+              <h2 className="text-4xl font-bold mb-6">About Olímpio Mello</h2>
               <p className="text-gray-600 mb-6">
-                With over 15 years of experience in corporate and civil litigation, James Anderson has established himself as a trusted legal advisor to businesses and individuals alike.
+                With over 15 years of experience in corporate and civil litigation, olímpio Mello has established himself as a trusted legal advisor to businesses and individuals alike. His commitment to excellence and unwavering dedication to his clients have earned him a reputation as one of the top attorneys in the country.
               </p>
               <div className="space-y-4">
                 {[
-                  'Harvard Law School Graduate',
-                  'Board Certified Civil Trial Specialist',
-                  'Member of the American Bar Association',
+                  'Amazonas Law School Graduate',
+                  'Board Certified Electoral Trial Specialist',
+                  'Member of the Special Committees for Electoral and International Law',
+                  'Foreign Committee and Maritime Law at the OAB/BA',
                 ].map((item, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle2 className="w-5 h-5 text-blue-600 mr-3" />
@@ -126,7 +134,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                text: "James's expertise and dedication to our case was exceptional. Highly recommended!",
+                text: "Olímpio's expertise and dedication to our case was exceptional. Highly recommended!",
                 author: "Sarah Johnson",
                 position: "CEO, Tech Solutions Inc."
               },
@@ -166,7 +174,7 @@ function App() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-6 h-6 mr-4" />
-                  <span>contact@andersonlaw.com</span>
+                  <span>pimpao_vamosnessa@hotmail.com</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 mr-4" />
@@ -216,7 +224,7 @@ function App() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-8">
         <div className="container mx-auto px-6 text-center">
-          <p>© 2024 Anderson Law. All rights reserved.</p>
+          <p>© 2025 Olímpio Law. All rights reserved.</p>
         </div>
       </footer>
     </div>
