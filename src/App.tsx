@@ -21,7 +21,7 @@ function App() {
         <div className="relative container mx-auto px-6">
           <nav className="fixed top-0 left-6 right-6 py-6 z-50">
             <div className="flex justify-between items-center">
-              <h1 className="text-white text-2xl font-bold">BIG FAT LAW</h1>
+              <h1 className="text-white text-2xl font-bold">MELLO ASSOCIATES</h1>
               <div className="hidden md:flex space-x-8">
                 <a href="#services" className="text-white hover:text-gray-300">Services</a>
                 <a href="#about" className="text-white hover:text-gray-300">About</a>
@@ -60,7 +60,7 @@ function App() {
             </div>
             <div>
               <p className="text-4xl font-bold mb-2">98%</p>
-              <p className="text-lg">Client Sexual Satisfaction</p>
+              <p className="text-lg">Client Satisfaction</p>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ function App() {
       {/* Services Section */}
       <section id="services" className="py-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">Our Practice Areas</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">Areas of law</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { title: 'Corporate Law', icon: <Users className="w-8 h-8 mb-4" /> },
@@ -140,7 +140,7 @@ function App() {
               {
                 text: "Professional, knowledgeable, and always available when we needed guidance.",
                 author: "Leonardo Cancissu",
-                position: "Real Estate Teacher"
+                position: "Professor"
               },
               {
                 text: "The best legal representation I could have asked for. Outstanding results!",
