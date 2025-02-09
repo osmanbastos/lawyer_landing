@@ -10,7 +10,7 @@ function App() {
           <picture>
             <source srcSet="../public/assets/images/law-office.jpg" type="image/jpeg" />
             <img
-              src="https://github.com/osmanbastos/lawyer_landing/blob/main/public/assets/images/law-office.jpg"
+              src="https://github.com/osmanbastos/lawyer_landing/blob/main/public/assets/images/law-office.jpg?raw=true"
               alt="Law Office"
               className="w-full h-full object-cover"
             />
@@ -97,7 +97,7 @@ function App() {
               <picture>
                 <source srcSet="../public/assets/images/olimpio_lawyer.png" type="image/png" />
                 <img
-                  src="https://github.com/osmanbastos/lawyer_landing/blob/main/public/assets/images/olimpio_lawyer.png"
+                  src="https://github.com/osmanbastos/lawyer_landing/blob/main/public/assets/images/olimpio_lawyer.png?raw=true"
                   alt="Olímpio Mello Lawyer"
                   className="w-full h-full object-cover"
                 />
