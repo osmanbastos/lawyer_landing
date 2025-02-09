@@ -95,16 +95,10 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <picture>
-                <source srcSet="https://github.com/osmanbastos/lawyer_landing/blob/main/public/assets/images/olimpio_lawyer.png" type="image/png" />
                 <source srcSet="../public/assets/images/olimpio_lawyer.png" type="image/png" />
                 <img
                   src="https://github.com/osmanbastos/lawyer_landing/blob/main/public/assets/images/olimpio_lawyer.png"
                   alt="Olímpio Mello Lawyer"
-                  className="w-full h-full object-cover"
-                />
-                <img
-                  src="../public/assets/images/olimpio_lawyer.png"
-                  alt="Olímpio MelloLawyer"
                   className="w-full h-full object-cover"
                 />
               </picture>
