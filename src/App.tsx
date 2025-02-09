@@ -134,17 +134,17 @@ function App() {
             {[
               {
                 text: "Olímpio's expertise and dedication to our case was exceptional. Highly recommended!",
-                author: "Sarah Johnson",
-                position: "CEO, Tech Solutions Inc."
+                author: "Osman Bastos",
+                position: "Developer, Monteiro Nascimento Laywers"
               },
               {
                 text: "Professional, knowledgeable, and always available when we needed guidance.",
-                author: "Michael Chen",
-                position: "Real Estate Developer"
+                author: "Leonardo Cancissu",
+                position: "Real Estate Teacher"
               },
               {
                 text: "The best legal representation I could have asked for. Outstanding results!",
-                author: "Emily Rodriguez",
+                author: "Pimpão Vamosnessa",
                 position: "Small Business Owner"
               }
             ].map((testimonial, index) => (
