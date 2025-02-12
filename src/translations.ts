@@ -148,7 +148,7 @@ interface Translation {
             }
         },
         footer: {
-            rights: "© 2025 Olímpio Mello. All rights reserved."
+            rights: "Developed by Osman Bastos - © 2025 Olímpio Mello. All rights reserved."
         }
     },
     br: {
@@ -233,7 +233,7 @@ interface Translation {
             },
         },
         footer: {
-            rights: "© 2025 Olímpio Mello. Todos os direitos reservados.",
+            rights: "Desenvolvido com por Osman Bastos - © 2025 Olímpio Mello. Todos os direitos reservados.",
         },
     },
     pt: { 
@@ -318,7 +318,7 @@ interface Translation {
           }
         },
         footer: {
-          rights: "© 2025 Olímpio Mello. Todos os direitos reservados."
+          rights: "Desenvolvido por Osman Bastos - © 2025 Olímpio Mello. Todos os direitos reservados."
         }
     },
     de: { 
@@ -403,7 +403,7 @@ interface Translation {
           }
         },
         footer: {
-          rights: "© 2025 Olímpio Mello. Alle Rechte vorbehalten."
+          rights: "Entwickelt von Osman Bastos - © 2025 Olímpio Mello. Alle Rechte vorbehalten."
         }
     }
 };      
