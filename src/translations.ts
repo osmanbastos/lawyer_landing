@@ -106,7 +106,8 @@ interface Translation {
             "Certified Specialist in Electoral Law",
             "Member of the Brazilian Bar Association",
             "Member of the Portuguese Bar Association",
-            "Judicial Arbitrator and Conflict Mediator certified by CONAJA (National Council of Arbitral Justice) and recognized by the CNJ - National Council of Justice"
+            "Judicial Arbitrator certified by CONAJA (National Council of Arbitral Justice)",
+            "Conflict Mediator recognized by the CNJ - National Council of Justice"
             ]
         },
         testimonials: {
@@ -186,7 +187,8 @@ interface Translation {
             "Especialista Certificado em Direito Eleitoral", 
             "Membro da Ordem dos Advogados do Brasil", 
             "Membro da Ordem dos Advogados de Portugal",
-            "Árbitro Judicial e Mediador de Conflitos certificado pelo 'CONAJA'  (Conselho Nacional de Justiça Arbitral) e reconhecido pelo CNJ - Conselho Nacional de Justiça",
+            "Árbitro Judicial certificado pelo CONAJA (Conselho Nacional de Justiça Arbitral)",
+            "Mediador de Conflitos reconhecido pelo CNJ - Conselho Nacional de Justiça",
             ],
         },
         testimonials: {
@@ -266,7 +268,8 @@ interface Translation {
             "Especialista Certificado em Direito Eleitoral",
             "Membro da Ordem dos Advogados do Brasil",
             "Membro da Ordem dos Advogados de Portugal",
-            "Árbitro Judicial e Mediador de Conflitos certificado pelo CONAJA (Conselho Nacional de Justiça Arbitral) e reconhecido pelo CNJ - Conselho Nacional de Justiça"
+            "Árbitro Judicial certificado pelo CONAJA (Conselho Nacional de Justiça Arbitral)",
+            "Mediador de Conflitos reconhecido pelo CNJ - Conselho Nacional de Justiça"
           ]
         },
         testimonials: {
@@ -346,7 +349,8 @@ interface Translation {
             "Zertifizierter Spezialist für Wahlrecht",
             "Mitglied der brasilianischen Anwaltskammer",
             "Mitglied der portugiesischen Anwaltskammer",
-            "Gerichtsschiedsrichter und Konfliktmediator, zertifiziert vom CONAJA (Nationaler Rat für Schiedsjustiz) und anerkannt vom CNJ - Nationaler Justizrat"
+            "Gerichtsschiedsrichter, zertifiziert vom CONAJA (Nationaler Rat für Schiedsjustiz)",
+            "Konfliktvermittler, anerkannt vom CNJ - Nationaler Justizrat",
           ]
         },
         testimonials: {

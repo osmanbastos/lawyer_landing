@@ -142,9 +142,9 @@ function App() {
           <h2 className="text-4xl font-bold text-center mb-16">{t.services.title}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
+              { title: t.services.realEstate.title, description: t.services.realEstate.description, icon: <MapPin className="w-8 h-8 mb-4" /> },
               { title: t.services.corporate.title, description: t.services.corporate.description, icon: <Users className="w-8 h-8 mb-4" /> },
               { title: t.services.civil.title, description: t.services.civil.description, icon: <MessageSquare className="w-8 h-8 mb-4" /> },
-              { title: t.services.realEstate.title, description: t.services.realEstate.description, icon: <MapPin className="w-8 h-8 mb-4" /> },
             ].map((service, index) => (
               <div key={index} className="p-8 border rounded-lg hover:shadow-lg transition">
                 {service.icon}
@@ -165,8 +165,8 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80"
-                alt="Senior Lawyer"
+                src="/assets/images/olimpio_lawyer.png"
+                alt="Olímpio Lawyer"
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -213,15 +213,15 @@ function App() {
               <div className="space-y-6">
                 <div className="flex items-center">
                   <Phone className="w-6 h-6 mr-4" />
-                  <span>(555) 123-4567</span>
+                  <span>+49 176 66437172</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-6 h-6 mr-4" />
-                  <span>contact@andersonlaw.com</span>
+                  <span>oli.melloadv@gmail.com</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 mr-4" />
-                  <span>123 Legal Street, New York, NY 10001</span>
+                  <span>Colônia, Renânia do Norte-Vestfália, Alemanha</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-6 h-6 mr-4" />
@@ -229,9 +229,9 @@ function App() {
                 </div>
               </div>
               <div className="flex space-x-4 mt-8">
-                <a href="#" className="hover:text-blue-400"><Facebook className="w-6 h-6" /></a>
-                <a href="#" className="hover:text-blue-400"><Twitter className="w-6 h-6" /></a>
-                <a href="#" className="hover:text-blue-400"><Linkedin className="w-6 h-6" /></a>
+                {/* <a href="#" className="hover:text-blue-400"><Facebook className="w-6 h-6" /></a>
+                <a href="#" className="hover:text-blue-400"><Twitter className="w-6 h-6" /></a> */}
+                <a href="linkedin.com/in/olímpio-mello" className="hover:text-blue-400"><Linkedin className="w-6 h-6" /></a>
               </div>
             </div>
             <form className="space-y-6">
