@@ -122,7 +122,7 @@ interface Translation {
             title: "Client Testimonials",
             items: [
             {
-                text: "Olympio played an essential role in my term as a State Representative in the state of Bahia, Brazil. His unwavering integrity and legal expertise stand out in his responsibilities as Parliamentary Secretary and Legal Coordinator. In addition to offering a well-founded and thoughtful opinion, he has proven skilled in drafting legal projects and efficiently guiding them through the relevant committees. His tireless dedication to finding solutions that benefit the people of Bahia is admirable and evident in all aspects of his work. His ability to understand the challenges faced by the population and translate them into concrete legal actions is commendable. It is important to highlight that Olímpio Alves de Mello Neto was the person for whom I ran",
+                text: "Olímpio played an essential role in my term as a State Representative in the state of Bahia, Brazil. His unwavering integrity and legal expertise stand out in his responsibilities as Parliamentary Secretary and Legal Coordinator. In addition to offering a well-founded and thoughtful opinion, he has proven skilled in drafting legal projects and efficiently guiding them through the relevant committees. His tireless dedication to finding solutions that benefit the people of Bahia is admirable and evident in all aspects of his work. His ability to understand the challenges faced by the population and translate them into concrete legal actions is commendable. It is important to highlight that Olímpio Alves de Mello Neto was the person for whom I ran",
                 author: "José de Arimatéia",
                 position: "Regional Deputy"
             },

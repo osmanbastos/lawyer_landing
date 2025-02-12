@@ -87,7 +87,7 @@ function App() {
           <nav className="fixed top-0 left-0 right-0 py-6 z-40 bg-gradient-to-b from-gray-900/80 to-transparent">
             <div className="container mx-auto px-6">
               <div className="flex justify-between items-center">
-                <h1 className="text-white text-2xl font-bold">MELLO ASSOCIATES</h1>
+                <h1 className="text-white text-2xl font-bold">Olímpio Mello Advocacia & Consultoria</h1>
                 <div className="hidden md:flex space-x-8">
                   <a href="#services" className="text-white hover:text-gray-300">{t.nav.services}</a>
                   <a href="#about" className="text-white hover:text-gray-300">{t.nav.about}</a>
@@ -171,7 +171,7 @@ function App() {
               <img
                 src="/assets/images/olimpio-lawyer.jpg"
                 alt="Olímpio Lawyer"
-                className="h-dvd rounded-full shadow-xl object-cover"
+                className="rounded-lg shadow-xl object-cover"
               />
             </div>
             <div>
