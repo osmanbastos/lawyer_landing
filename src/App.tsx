@@ -169,9 +169,9 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/assets/images/olimpio_lawyer.png"
+                src="/assets/images/olimpio-lawyer.jpg"
                 alt="Olímpio Lawyer"
-                className="rounded-lg shadow-lg"
+                className="h-dvd rounded-full shadow-xl object-cover"
               />
             </div>
             <div>
@@ -238,12 +238,13 @@ function App() {
                 <a href="https://www.linkedin.com/in/ol%C3%ADmpio-mello/" target='_blank' className="hover:text-blue-400"><Linkedin className="w-6 h-6" /></a>
               </div>
             </div>
-            <form className="space-y-6">
+            <form className="space-y-6" action="https://formsubmit.co/c6256374146f9084333c1249996b6ef0" method="POST">
               <div>
                 <input
                   type="text"
                   placeholder={t.contact.form.name}
                   className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none"
+                  name="name" required
                 />
               </div>
               <div>
@@ -251,6 +252,7 @@ function App() {
                   type="email"
                   placeholder={t.contact.form.email}
                   className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none"
+                  name="email" required
                 />
               </div>
               <div>
@@ -258,9 +260,12 @@ function App() {
                   placeholder={t.contact.form.message}
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none"
+                  name="message"
+                  required
                 ></textarea>
+                <input type="hidden" name="_autoresponse" value="Mensagem recebida, logo entraremos em contato."></input>
               </div>
-              <button className="w-full bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
+              <button type="submit" className="w-full bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
                 {t.contact.form.send}
               </button>
             </form>

@@ -32,6 +32,10 @@ interface Translation {
         title: string;
         description: string;
       };
+      international: {
+        title: string;
+        description: string;
+      };
       learnMore: string;
     };
     about: {
@@ -70,7 +74,7 @@ interface Translation {
             contact: "Contact"
         },
         hero: {
-            title: "Defending Your Political Rights with Excellence and Integrity",
+            title: "Defending Your Rights with Excellence and Integrity",
             subtitle: "Specialized legal representation tailored to your needs. We fight for justice, protecting your interests every step of the way.",
             buttons: {
             consultation: "Schedule a Consultation",
@@ -95,6 +99,10 @@ interface Translation {
             corporate: {
             title: "Corporate Law",
             description: "Comprehensive legal solutions tailored to your specific needs."
+            },
+            international: {
+              title: "International and Migration Law",
+              description: "Legal assistance for immigration, citizenship, and human rights issues"
             },
             learnMore: "Learn More"
         },
@@ -143,7 +151,7 @@ interface Translation {
             rights: "© 2025 Olímpio Mello. All rights reserved."
         }
     },
-    "br": {
+    br: {
         nav: {
             services: "Serviços",
             about: "Sobre",
@@ -151,7 +159,7 @@ interface Translation {
             contact: "Contato",
         },
         hero: {
-            title: "Defendendo Seus Direitos Políticos com Excelência e Integridade", 
+            title: "Defendendo Seus Direitos com Excelência e Integridade", 
             subtitle: "Representação jurídica especializada adaptada às suas necessidades. Lutamos pela justiça, protegendo seus interesses em cada etapa.",
             buttons: {
             consultation: "Agendar Consulta",
@@ -176,6 +184,10 @@ interface Translation {
             corporate: {
             title: "Direito Empresarial", 
             description: "Soluções jurídicas abrangentes adaptadas às suas necessidades específicas.",
+            },
+            international: {
+              title: "Direito Internacional e Migratório",
+              description: "Assistência jurídica para questões de imigração, cidadania e direitos humanos"
             },
             learnMore: "Saiba Mais",
         },
@@ -232,7 +244,7 @@ interface Translation {
           contact: "Contacto"
         },
         hero: {
-          title: "Defendendo os Seus Direitos Políticos com Excelência e Integridade",
+          title: "Defendendo os Seus Direitos com Excelência e Integridade",
           subtitle: "Representação jurídica especializada adaptada às suas necessidades. Lutamos pela justiça, protegendo os seus interesses em cada etapa.",
           buttons: {
             consultation: "Marcar Consulta",
@@ -257,6 +269,10 @@ interface Translation {
           corporate: {
             title: "Direito Empresarial",
             description: "Soluções jurídicas abrangentes adaptadas às suas necessidades específicas."
+          },
+          international: {
+            title: "Direito Internacional e das Migrações",
+            description: "Assistência jurídica para questões de imigração, cidadania e direitos humanos"
           },
           learnMore: "Saber Mais"
         },
@@ -313,7 +329,7 @@ interface Translation {
           contact: "Kontakt"
         },
         hero: {
-          title: "Verteidigung Ihrer politischen Rechte mit Exzellenz und Integrität",
+          title: "Verteidigung Ihrer Rechte mit Exzellenz und Integrität",
           subtitle: "Spezialisierte rechtliche Vertretung, die auf Ihre Bedürfnisse zugeschnitten ist. Wir kämpfen für Gerechtigkeit und schützen Ihre Interessen in jeder Phase.",
           buttons: {
             consultation: "Beratung vereinbaren",
@@ -338,6 +354,10 @@ interface Translation {
           corporate: {
             title: "Unternehmensrecht",
             description: "Umfassende rechtliche Lösungen, die auf Ihre spezifischen Bedürfnisse zugeschnitten sind."
+          },
+          international: {
+            title: "Internationales und Migrationsrecht",
+            description: "Rechtliche Unterstützung bei Einwanderungs-, Staatsbürgerschafts- und Menschenrechtsfragen"
           },
           learnMore: "Mehr erfahren"
         },
