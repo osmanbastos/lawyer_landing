@@ -122,19 +122,19 @@ interface Translation {
             title: "Client Testimonials",
             items: [
             {
-                text: "Olímpio's expertise and dedication to our case were exceptional. Highly recommended!",
-                author: "Sarah Johnson",
-                position: "CEO, Tech Solutions Inc."
+                text: "Olympio played an essential role in my term as a State Representative in the state of Bahia, Brazil. His unwavering integrity and legal expertise stand out in his responsibilities as Parliamentary Secretary and Legal Coordinator. In addition to offering a well-founded and thoughtful opinion, he has proven skilled in drafting legal projects and efficiently guiding them through the relevant committees. His tireless dedication to finding solutions that benefit the people of Bahia is admirable and evident in all aspects of his work. His ability to understand the challenges faced by the population and translate them into concrete legal actions is commendable. It is important to highlight that Olímpio Alves de Mello Neto was the person for whom I ran",
+                author: "José de Arimatéia",
+                position: "Regional Deputy"
             },
             {
-                text: "Professional, knowledgeable, and always available when we needed guidance.",
-                author: "Michael Chen",
-                position: "Real Estate Developer"
+                text: "Olímpio's expertise and dedication to our case were exceptional. Highly recommended!",
+                author: "Sueli Cancissú",
+                position: "Pharmacist"
             },
             {
                 text: "The best legal representation I could have asked for. Outstanding results!",
-                author: "Emily Rodriguez",
-                position: "Small Business Owner"
+                author: "Mark Xavier",
+                position: "Electrical Engineer"
             }
             ]
         },
@@ -207,19 +207,19 @@ interface Translation {
             title: "Depoimentos de Clientes",
             items: [
             {
-                text: "A expertise e dedicação de Olímpio ao nosso caso foi excepcional. Altamente recomendado!", 
-                author: "Sarah Johnson",
+                text: "Olímpio desempenhou um papel essencial no meu mandato como Deputado Estadual no estado da Bahia, Brasil. Sua inflexível integridade e capacidade jurídica se destacam em suas responsabilidades como Secretário Parlamentar e Coordenador Jurídico. Além de oferecer uma opinião fundamentada e criteriosa, tem se mostrado hábil na elaboração de projetos jurídicos e na condução eficiente através dos comitês pertinentes.Sua dedicação incansável na busca de soluções para beneficiar a população baiana é admirável e evidente em todos os aspectos de sua atuação. A sua capacidade de compreender os desafios que a população enfrenta e traduzi-los em ações jurídicas concretas é digna de elogio. É importante ressaltar que Olímpio Alves de Mello Neto foi o responsável a qual eu concorri.", 
+                author: "José de Arimatéia",
                 position: "CEO, Tech Solutions Inc.",
             },
             {
-                text: "Profissional, conhecedor e sempre disponível quando precisávamos de orientação.",
-                author: "Michael Chen",
-                position: "Incorporador Imobiliário",
+                text: "A expertise e dedicação de Olímpio ao nosso caso foi excepcional. Altamente recomendado!",
+                author: "Suely Cancissú",
+                position: "Farmacêutica",
             },
             {
                 text: "A melhor representação jurídica que eu poderia ter pedido. Resultados excepcionais!",
-                author: "Emily Rodriguez",
-                position: "Proprietária de Pequena Empresa",
+                author: "Marcos Xavier",
+                position: "Engenheiro Eletrônico",
             },
             ],
         },
@@ -292,19 +292,19 @@ interface Translation {
           title: "Testemunhos de Clientes",
           items: [
             {
-              text: "A experiência e dedicação do Olímpio ao nosso caso foram excecionais. Altamente recomendado!",
-              author: "Sarah Johnson",
-              position: "CEO, Tech Solutions Inc."
+              text: "Olímpio desempenhou um papel essencial no meu mandato como Deputado Regional no estado da Bahia, Brasil. A sua integridade inabalável e competência jurídica destacam-se nas suas responsabilidades como Secretário Parlamentar e Coordenador Jurídico. Além de oferecer uma opinião bem fundamentada e criteriosa, tem demonstrado grande habilidade na elaboração de projetos jurídicos e na sua condução eficiente através das comissões pertinentes. A sua dedicação incansável na busca de soluções para beneficiar a população baiana é admirável e evidente em todos os aspetos da sua atuação. A sua capacidade de compreender os desafios enfrentados pela população e traduzi-los em ações jurídicas concretas é digna de elogio. É importante salientar que Olímpio Alves de Mello Neto foi a pessoa por quem concorri",
+              author: "José de Arimatéia",
+              position: "Deputado Regional"
             },
             {
-              text: "Profissional, conhecedor e sempre disponível quando precisávamos de orientação.",
-              author: "Michael Chen",
-              position: "Promotor Imobiliário"
+              text: "A experiência e dedicação do Olímpio ao nosso caso foram excecionais. Altamente recomendado!",
+              author: "Suely Cancissú",
+              position: "Farmacêutica"
             },
             {
               text: "A melhor representação jurídica que poderia ter pedido. Resultados excecionais!",
-              author: "Emily Rodriguez",
-              position: "Proprietária de Pequena Empresa"
+              author: "Marcos Xavier",
+              position: "Engenheiro Eletrónico"
             }
           ]
         },
@@ -377,19 +377,19 @@ interface Translation {
           title: "Kundenbewertungen",
           items: [
             {
-              text: "Olímpios Fachwissen und Engagement für unseren Fall waren außergewöhnlich. Sehr zu empfehlen!",
-              author: "Sarah Johnson",
-              position: "CEO, Tech Solutions Inc."
+              text: "Olímpio spielte eine wesentliche Rolle in meiner Amtszeit als Landtagsabgeordneter im Bundesstaat Bahia, Brasilien. Seine unerschütterliche Integrität und juristische Kompetenz zeichnen sich in seinen Verantwortlichkeiten als Parlamentarischer Sekretär und Juristischer Koordinator aus. Neben der fundierten und durchdachten Meinungsäußerung hat er sich als geschickt in der Ausarbeitung von juristischen Projekten und deren effizienter Führung durch die zuständigen Ausschüsse erwiesen. Sein unermüdliches Engagement bei der Suche nach Lösungen zum Wohle der Bevölkerung Bahias ist bewundernswert und in allen Aspekten seiner Tätigkeit offensichtlich. Seine Fähigkeit, die Herausforderungen der Bevölkerung zu verstehen und sie in konkrete juristische Maßnahmen umzusetzen, ist lobenswert. Es ist wichtig hervorzuheben, dass Olímpio Alves de Mello Neto die Person war, für die ich kandidierte.",
+              author: "José de Arimatéia",
+              position: "Landtagsabgeordneter"
             },
             {
-              text: "Professionell, sachkundig und immer verfügbar, wenn wir Beratung brauchten.",
-              author: "Michael Chen",
-              position: "Immobilienentwickler"
+              text: "Olímpios Fachwissen und Engagement für unseren Fall waren außergewöhnlich. Sehr zu empfehlen!",
+              author: "Marcos Xavier",
+              position: "Elektronikingenieur"
             },
             {
               text: "Die beste rechtliche Vertretung, die ich mir wünschen konnte. Hervorragende Ergebnisse!",
-              author: "Emily Rodriguez",
-              position: "Kleinunternehmerin"
+              author: "Suely Cancissú",
+              position: "Pharmazeutin"
             }
           ]
         },

@@ -128,7 +128,7 @@ function App() {
             </div>
             <div className="flex flex-col items-center">
               <Users className="w-12 h-12 mb-4" />
-              <p className="text-4xl font-bold mb-2">15+</p>
+              <p className="text-4xl font-bold mb-2">11+</p>
               <p className="text-lg">{t.stats.experience}</p>
             </div>
             <div className="flex flex-col items-center">
