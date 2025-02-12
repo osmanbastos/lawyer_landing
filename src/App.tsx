@@ -103,7 +103,7 @@ function App() {
             <p className="text-xl text-gray-200 mb-8">{t.hero.subtitle}</p>
             <div className="flex space-x-4">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
-                <a href="https://wa.me/+5571991395996/?text=urlencodedtex" target="_blank" >
+                <a href="https://wa.me/+4917681428057/?text=urlencodedtex" target="_blank" >
                   {t.hero.buttons.consultation}
                 </a>
               </button>
@@ -217,7 +217,7 @@ function App() {
               <div className="space-y-6">
                 <div className="flex items-center">
                   <Phone className="w-6 h-6 mr-4" />
-                  <span>+49 176 66437172</span>
+                  <span>+49 176 81428057</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-6 h-6 mr-4" />
