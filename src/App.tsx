@@ -1,45 +1,112 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Award, Users, CheckCircle2, ArrowRight, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { translations } from './translations';
+
+type Language = 'en' | 'br' | 'pt' | 'de';
+
+const languageFlags: Record<Language, { src: string, alt: string }> = {
+  'en': {
+    src: '/assets/images/uk.png',
+    alt: 'UK Flag'
+  },
+  'br': {
+    src: '/assets/images/br.png',
+    alt: 'Brazil Flag'
+  },
+  'pt': {
+    src: '/assets/images/pt.png',
+    alt: 'Portugal Flag'
+  },
+  'de': {
+    src: '/assets/images/de.png',
+    alt: 'German Flag'
+  }
+};
 
 function App() {
+  const [offset, setOffset] = useState(0);
+  const [language, setLanguage] = useState<Language>('en');
+  const t = translations[language];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setOffset(window.pageYOffset);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <header className="relative h-screen flex items-center">
-        <div className="absolute inset-0">
-          <picture>
-            <source srcSet="/assets/images/law-office.jpg" type="image/jpeg" />
-            <img
-              src="/assets/images/law-office.jpg"
-              alt="Law Office"
-              className="w-full h-full object-cover"
-            />
-          </picture>
+      {/* Language Selection */}
+      <div className="fixed top-14 left-7 flex gap-3 z-50">
+        {(['en', 'br', 'pt', 'de'] as Language[]).map((lang) => (
+          <button
+            key={lang}
+            onClick={() => setLanguage(lang)}
+            className={`w-7 h-7 rounded-full flex flex-col items-center justify-center text-sm font-bold transition-all overflow-hidden ${
+              language === lang
+                ? 'ring-2 ring-blue-600 ring-offset-2'
+                : 'hover:ring-2 hover:ring-gray-300 hover:ring-offset-2'
+            }`}
+          >
+            <div className="w-full h-full relative">
+              <img
+                src={languageFlags[lang].src}
+                alt={languageFlags[lang].alt}
+                className="w-full h-full object-cover"
+              />
+              <div className={`absolute inset-0 flex items-center justify-center bg-black/40 ${
+                language === lang ? 'bg-blue-600/40' : 'hover:bg-black/20'
+              }`}>
+                <span className="text-white text-xs font-bold">
+                  {lang === 'en' ? 'EN' : lang === 'br' ? 'BR' : lang === 'pt' ? 'PT' : 'DE'}
+                </span>
+              </div>
+            </div>
+          </button>
+        ))}
+      </div>
+
+      {/* Hero Section with Parallax */}
+      <header className="relative h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0" style={{ transform: `translateY(${offset * 0.5}px)` }}>
+          <img
+            src="/assets/images/law-office.jpg"
+            alt="Law Office"
+            className="w-full h-[120%] object-cover"
+          />
           <div className="absolute inset-0 bg-gray-900/70"></div>
         </div>
         
         <div className="relative container mx-auto px-6">
-          <nav className="fixed top-0 left-6 right-6 py-6 z-50">
-            <div className="flex justify-between items-center">
-              <h1 className="text-white text-2xl font-bold">MELLO ASSOCIATES</h1>
-              <div className="hidden md:flex space-x-8">
-                <a href="#services" className="text-white hover:text-gray-300">Services</a>
-                <a href="#about" className="text-white hover:text-gray-300">About</a>
-                <a href="#testimonials" className="text-white hover:text-gray-300">Testimonials</a>
-                <a href="#contact" className="text-white hover:text-gray-300">Contact</a>
+          <nav className="fixed top-0 left-0 right-0 py-6 z-40 bg-gradient-to-b from-gray-900/80 to-transparent">
+            <div className="container mx-auto px-6">
+              <div className="flex justify-between items-center">
+                <h1 className="text-white text-2xl font-bold">MELLO ASSOCIATES</h1>
+                <div className="hidden md:flex space-x-8">
+                  <a href="#services" className="text-white hover:text-gray-300">{t.nav.services}</a>
+                  <a href="#about" className="text-white hover:text-gray-300">{t.nav.about}</a>
+                  <a href="#testimonials" className="text-white hover:text-gray-300">{t.nav.testimonials}</a>
+                  <a href="#contact" className="text-white hover:text-gray-300">{t.nav.contact}</a>
+                </div>
               </div>
             </div>
           </nav>
           
-          <div className="max-w-3xl">
-            <h2 className="text-5xl font-bold text-white mb-6">Defending Your Rights with Excellence and Integrity</h2>
-            <p className="text-xl text-gray-200 mb-8">Expert legal representation tailored to your unique needs. We fight for justice, protecting your interests every step of the way.</p>
+          <div className="max-w-3xl" style={{ transform: `translateY(${offset * 0.2}px)` }}>
+            <h2 className="text-5xl font-bold text-white mb-6">{t.hero.title}</h2>
+            <p className="text-xl text-gray-200 mb-8">{t.hero.subtitle}</p>
             <div className="flex space-x-4">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
-                Schedule Consultation
+                {t.hero.buttons.consultation}
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition">
-                Learn More
+                {t.hero.buttons.learnMore}
               </button>
             </div>
           </div>
@@ -50,17 +117,20 @@ function App() {
       <section className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
+            <div className="flex flex-col items-center">
+              <Award className="w-12 h-12 mb-4" />
               <p className="text-4xl font-bold mb-2">500+</p>
-              <p className="text-lg">Cases Won</p>
+              <p className="text-lg">{t.stats.casesWon}</p>
             </div>
-            <div>
+            <div className="flex flex-col items-center">
+              <Users className="w-12 h-12 mb-4" />
               <p className="text-4xl font-bold mb-2">15+</p>
-              <p className="text-lg">Years Experience</p>
+              <p className="text-lg">{t.stats.experience}</p>
             </div>
-            <div>
+            <div className="flex flex-col items-center">
+              <CheckCircle2 className="w-12 h-12 mb-4" />
               <p className="text-4xl font-bold mb-2">98%</p>
-              <p className="text-lg">Client Satisfaction</p>
+              <p className="text-lg">{t.stats.satisfaction}</p>
             </div>
           </div>
         </div>
@@ -69,19 +139,19 @@ function App() {
       {/* Services Section */}
       <section id="services" className="py-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">Areas of law</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">{t.services.title}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: 'Corporate Law', icon: <Users className="w-8 h-8 mb-4" /> },
-              { title: 'Civil Litigation', icon: <MessageSquare className="w-8 h-8 mb-4" /> },
-              { title: 'Real Estate Law', icon: <MapPin className="w-8 h-8 mb-4" /> },
+              { title: t.services.corporate.title, description: t.services.corporate.description, icon: <Users className="w-8 h-8 mb-4" /> },
+              { title: t.services.civil.title, description: t.services.civil.description, icon: <MessageSquare className="w-8 h-8 mb-4" /> },
+              { title: t.services.realEstate.title, description: t.services.realEstate.description, icon: <MapPin className="w-8 h-8 mb-4" /> },
             ].map((service, index) => (
               <div key={index} className="p-8 border rounded-lg hover:shadow-lg transition">
                 {service.icon}
                 <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-4">Comprehensive legal solutions tailored to your specific needs.</p>
+                <p className="text-gray-600 mb-4">{service.description}</p>
                 <a href="#" className="text-blue-600 flex items-center">
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  {t.services.learnMore} <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
             ))}
@@ -94,27 +164,17 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <picture>
-                <source srcSet="../assets/images/olimpio_lawyer.png" type="image/png" />
-                <img
-                  src="/assets/images/olimpio_lawyer.png"
-                  alt="Olímpio Mello Lawyer"
-                  className="w-full h-full object-cover"
-                />
-              </picture>
+              <img
+                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80"
+                alt="Senior Lawyer"
+                className="rounded-lg shadow-lg"
+              />
             </div>
             <div>
-              <h2 className="text-4xl font-bold mb-6">About Olímpio Mello</h2>
-              <p className="text-gray-600 mb-6">
-                With over 15 years of experience in corporate and civil litigation, olímpio Mello has established himself as a trusted legal advisor to businesses and individuals alike. His commitment to excellence and unwavering dedication to his clients have earned him a reputation as one of the top attorneys in the country.
-              </p>
+              <h2 className="text-4xl font-bold mb-6">{t.about.title}</h2>
+              <p className="text-gray-600 mb-6">{t.about.description}</p>
               <div className="space-y-4">
-                {[
-                  'Amazonas Law School Graduate',
-                  'Board Certified Electoral Trial Specialist',
-                  'Member of the Special Committees for Electoral and International Law',
-                  'Foreign Committee and Maritime Law at the OAB/BA',
-                ].map((item, index) => (
+                {t.about.credentials.map((item, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle2 className="w-5 h-5 text-blue-600 mr-3" />
                     <span>{item}</span>
@@ -129,25 +189,9 @@ function App() {
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">Client Testimonials</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">{t.testimonials.title}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                text: "Olímpio's expertise and dedication to our case was exceptional. Highly recommended!",
-                author: "Osman Bastos",
-                position: "Developer, Monteiro Nascimento Laywers"
-              },
-              {
-                text: "Professional, knowledgeable, and always available when we needed guidance.",
-                author: "Leonardo Cancissu",
-                position: "Professor"
-              },
-              {
-                text: "The best legal representation I could have asked for. Outstanding results!",
-                author: "Pimpão Vamosnessa",
-                position: "Small Business Owner"
-              }
-            ].map((testimonial, index) => (
+            {t.testimonials.items.map((testimonial, index) => (
               <div key={index} className="p-8 bg-gray-50 rounded-lg">
                 <p className="text-gray-600 mb-6">"{testimonial.text}"</p>
                 <div>
@@ -165,7 +209,7 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-4xl font-bold mb-8">Get In Touch</h2>
+              <h2 className="text-4xl font-bold mb-8">{t.contact.title}</h2>
               <div className="space-y-6">
                 <div className="flex items-center">
                   <Phone className="w-6 h-6 mr-4" />
@@ -173,7 +217,7 @@ function App() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-6 h-6 mr-4" />
-                  <span>pimpao_vamosnessa@hotmail.com</span>
+                  <span>contact@andersonlaw.com</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 mr-4" />
@@ -194,26 +238,26 @@ function App() {
               <div>
                 <input
                   type="text"
-                  placeholder="Your Name"
+                  placeholder={t.contact.form.name}
                   className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none"
                 />
               </div>
               <div>
                 <input
                   type="email"
-                  placeholder="Your Email"
+                  placeholder={t.contact.form.email}
                   className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none"
                 />
               </div>
               <div>
                 <textarea
-                  placeholder="Your Message"
+                  placeholder={t.contact.form.message}
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none"
                 ></textarea>
               </div>
               <button className="w-full bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
-                Send Message
+                {t.contact.form.send}
               </button>
             </form>
           </div>
@@ -223,7 +267,7 @@ function App() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-8">
         <div className="container mx-auto px-6 text-center">
-          <p>© 2025 Olímpio Law. All rights reserved.</p>
+          <p>{t.footer.rights}</p>
         </div>
       </footer>
     </div>
