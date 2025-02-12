@@ -103,7 +103,7 @@ function App() {
             <p className="text-xl text-gray-200 mb-8">{t.hero.subtitle}</p>
             <div className="flex space-x-4">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
-                <a href="https://www.linkedin.com/in/ol%C3%ADmpio-mello/" target="_blank" >
+                <a href="https://wa.me/+5571991395996/?text=urlencodedtex" target="_blank" >
                   {t.hero.buttons.consultation}
                 </a>
               </button>
