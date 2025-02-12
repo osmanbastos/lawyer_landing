@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Language Selection */}
-      <div className="fixed top-14 left-7 flex gap-3 z-50">
+      <div className="fixed top-2 right-6 self-center flex gap-3 z-50">
         {(['en', 'br', 'pt', 'de'] as Language[]).map((lang) => (
           <button
             key={lang}
@@ -84,7 +84,7 @@ function App() {
         </div>
         
         <div className="relative container mx-auto px-6">
-          <nav className="fixed top-0 left-0 right-0 py-6 z-40 bg-gradient-to-b from-gray-900/80 to-transparent">
+          <nav className="fixed top-0 left-0 right-0 py-8 z-40 bg-gradient-to-b from-gray-900/80 to-transparent">
             <div className="container mx-auto px-6">
               <div className="flex justify-between items-center">
                 <h1 className="text-white text-2xl font-bold">Olímpio Mello Advocacia & Consultoria</h1>

@@ -233,7 +233,7 @@ interface Translation {
             },
         },
         footer: {
-            rights: "Desenvolvido com por Osman Bastos - © 2025 Olímpio Mello. Todos os direitos reservados.",
+            rights: "Desenvolvido por Osman Bastos - © 2025 Olímpio Mello. Todos os direitos reservados.",
         },
     },
     pt: { 
