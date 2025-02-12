@@ -103,10 +103,14 @@ function App() {
             <p className="text-xl text-gray-200 mb-8">{t.hero.subtitle}</p>
             <div className="flex space-x-4">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
-                {t.hero.buttons.consultation}
+                <a href="https://www.linkedin.com/in/ol%C3%ADmpio-mello/" target="_blank" >
+                  {t.hero.buttons.consultation}
+                </a>
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition">
-                {t.hero.buttons.learnMore}
+                <a href="https://www.linkedin.com/in/ol%C3%ADmpio-mello/" target="_blank" >
+                  {t.hero.buttons.learnMore}
+                </a>
               </button>
             </div>
           </div>
@@ -231,7 +235,7 @@ function App() {
               <div className="flex space-x-4 mt-8">
                 {/* <a href="#" className="hover:text-blue-400"><Facebook className="w-6 h-6" /></a>
                 <a href="#" className="hover:text-blue-400"><Twitter className="w-6 h-6" /></a> */}
-                <a href="linkedin.com/in/olímpio-mello" className="hover:text-blue-400"><Linkedin className="w-6 h-6" /></a>
+                <a href="https://www.linkedin.com/in/ol%C3%ADmpio-mello/" target='_blank' className="hover:text-blue-400"><Linkedin className="w-6 h-6" /></a>
               </div>
             </div>
             <form className="space-y-6">
