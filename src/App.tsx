@@ -277,7 +277,7 @@ function App() {
       <footer className="bg-gray-900 text-gray-400 py-8">
         <div className="container mx-auto px-6 text-center">
           <p>
-            <a class="footer-link "href="https://www.linkedin.com/in/osmanbastos" target="_blank" rel="noreferrer">
+            <a className="footer-link "href="https://www.linkedin.com/in/osmanbastos" target="_blank" rel="noreferrer">
               {t.footer.rights}
             </a>
           </p>
