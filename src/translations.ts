@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 interface Translation {
     nav: {
       services: string;
@@ -44,6 +46,8 @@ interface Translation {
       credentials: string[];
     };
     testimonials: {
+      showMore: ReactNode;
+      showLess: ReactNode;
       title: string;
       items: Array<{
         text: string;
@@ -119,6 +123,8 @@ interface Translation {
             ]
         },
         testimonials: {
+            showMore: "Show More",
+            showLess: "Show Less",
             title: "Client Testimonials",
             items: [
             {
@@ -201,9 +207,11 @@ interface Translation {
             "Membro da Ordem dos Advogados de Portugal",
             "Árbitro Judicial certificado pelo CONAJA (Conselho Nacional de Justiça Arbitral)",
             "Mediador de Conflitos reconhecido pelo CNJ - Conselho Nacional de Justiça",
-            ],
+            ]
         },
         testimonials: {
+            showMore: "Mostrar mais",
+            showLess: "Mostrar menos",
             title: "Depoimentos de Clientes",
             items: [
             {
@@ -289,6 +297,8 @@ interface Translation {
           ]
         },
         testimonials: {
+          showMore: "Mostrar mais",
+          showLess: "Mostrar menos",
           title: "Testemunhos de Clientes",
           items: [
             {
@@ -369,11 +379,11 @@ interface Translation {
             "Zertifizierter Spezialist für Wahlrecht",
             "Mitglied der brasilianischen Anwaltskammer",
             "Mitglied der portugiesischen Anwaltskammer",
-            "Gerichtsschiedsrichter, zertifiziert vom CONAJA (Nationaler Rat für Schiedsjustiz)",
-            "Konfliktvermittler, anerkannt vom CNJ - Nationaler Justizrat",
-          ]
+          ],
         },
         testimonials: {
+          showMore: "Mehr anzeigen",
+          showLess: "Weniger anzeigen",
           title: "Kundenbewertungen",
           items: [
             {

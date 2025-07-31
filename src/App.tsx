@@ -26,6 +26,7 @@ const languageFlags: Record<Language, { src: string, alt: string }> = {
 function App() {
   const [offset, setOffset] = useState(0);
   const [language, setLanguage] = useState<Language>('en');
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const t = translations[language];
 
   useEffect(() => {
@@ -197,7 +198,24 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {t.testimonials.items.map((testimonial, index) => (
               <div key={index} className="p-8 bg-gray-50 rounded-lg">
-                <p className="text-gray-600 mb-6">"{testimonial.text}"</p>
+                <p
+                  className={`text-gray-600 overflow-hidden transition-all ${
+                    expandedIndex === index ? '' : 'line-clamp-3'
+                  }`}
+                >
+                  "{testimonial.text}"
+                </p>
+                {testimonial.text.split(' ').length > 20 && (
+                  <button
+                    className="text-blue-600 text-sm underline mt-1 self-start"
+                    onClick={() =>
+                      setExpandedIndex(expandedIndex === index ? null : index)
+                    }
+                    type="button"
+                  >
+                    {expandedIndex === index ? t.testimonials.showLess : t.testimonials.showMore}
+                  </button>
+                )}
                 <div>
                   <p className="font-bold">{testimonial.author}</p>
                   <p className="text-gray-500">{testimonial.position}</p>
