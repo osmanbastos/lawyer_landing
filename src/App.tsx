@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Phone, Mail, MapPin, Clock, MessageSquare, Award, Users, CheckCircle2, ArrowRight, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Phone, Mail, MapPin, Clock, MessageSquare, Award, Users, CheckCircle2, ArrowRight, Linkedin } from 'lucide-react';
 import { translations } from './translations';
 
 type Language = 'en' | 'br' | 'pt' | 'de';
@@ -49,11 +49,10 @@ function App() {
           <button
             key={lang}
             onClick={() => setLanguage(lang)}
-            className={`w-7 h-7 rounded-full flex flex-col items-center justify-center text-sm font-bold transition-all overflow-hidden ${
-              language === lang
-                ? 'ring-2 ring-blue-600 ring-offset-2'
-                : 'hover:ring-2 hover:ring-gray-300 hover:ring-offset-2'
-            }`}
+            className={`w-7 h-7 rounded-full flex flex-col items-center justify-center text-sm font-bold transition-all overflow-hidden ${language === lang
+              ? 'ring-2 ring-blue-600 ring-offset-2'
+              : 'hover:ring-2 hover:ring-gray-300 hover:ring-offset-2'
+              }`}
           >
             <div className="w-full h-full relative">
               <img
@@ -61,9 +60,8 @@ function App() {
                 alt={languageFlags[lang].alt}
                 className="w-full h-full object-cover"
               />
-              <div className={`absolute inset-0 flex items-center justify-center bg-black/40 ${
-                language === lang ? 'bg-blue-600/40' : 'hover:bg-black/20'
-              }`}>
+              <div className={`absolute inset-0 flex items-center justify-center bg-black/40 ${language === lang ? 'bg-blue-600/40' : 'hover:bg-black/20'
+                }`}>
                 <span className="text-white text-xs font-bold">
                   {lang === 'en' ? 'EN' : lang === 'br' ? 'BR' : lang === 'pt' ? 'PT' : 'DE'}
                 </span>
@@ -83,7 +81,7 @@ function App() {
           />
           <div className="absolute inset-0 bg-gray-900/70"></div>
         </div>
-        
+
         <div className="relative container mx-auto px-6">
           <nav className="fixed top-0 left-0 right-0 py-8 z-40 bg-gradient-to-b from-gray-900/80 to-transparent">
             <div className="container mx-auto px-6">
@@ -98,7 +96,7 @@ function App() {
               </div>
             </div>
           </nav>
-          
+
           <div className="max-w-3xl" style={{ transform: `translateY(${offset * 0.2}px)` }}>
             <h2 className="text-5xl font-bold text-white mb-6">{t.hero.title}</h2>
             <p className="text-xl text-gray-200 mb-8">{t.hero.subtitle}</p>
@@ -199,9 +197,8 @@ function App() {
             {t.testimonials.items.map((testimonial, index) => (
               <div key={index} className="p-8 bg-gray-50 rounded-lg">
                 <p
-                  className={`text-gray-600 overflow-hidden transition-all ${
-                    expandedIndex === index ? '' : 'line-clamp-3'
-                  }`}
+                  className={`text-gray-600 overflow-hidden transition-all ${expandedIndex === index ? '' : 'line-clamp-3'
+                    }`}
                 >
                   "{testimonial.text}"
                 </p>
@@ -295,7 +292,7 @@ function App() {
       <footer className="bg-gray-900 text-gray-400 py-8">
         <div className="container mx-auto px-6 text-center">
           <p>
-            <a className="footer-link "href="https://www.linkedin.com/in/osmanbastos" target="_blank" rel="noreferrer">
+            <a className="footer-link " href="https://www.linkedin.com/in/osmanbastos" target="_blank" rel="noreferrer">
               {t.footer.rights}
             </a>
           </p>
