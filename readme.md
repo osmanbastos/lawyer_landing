@@ -126,6 +126,9 @@ Global stylesheet with minimal CSS (59 bytes) - relies heavily on Tailwind CSS u
 ## 📦 Available Scripts
 
 ```bash
+# Instalation
+npm install
+
 # Development server
 npm run dev
 
