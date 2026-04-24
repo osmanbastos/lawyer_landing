@@ -4,6 +4,16 @@ import { translations } from './translations';
 
 type Language = 'en' | 'br' | 'pt' | 'de';
 
+function detectLanguage(): Language {
+  const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+  const lang = browserLang.toLowerCase();
+
+  if (lang === 'pt-br') return 'br';
+  if (lang.startsWith('pt')) return 'pt';
+  if (lang.startsWith('de')) return 'de';
+  return 'en';
+}
+
 const languageFlags: Record<Language, { src: string, alt: string }> = {
   'en': {
     src: '/assets/images/uk.png',
@@ -25,7 +35,7 @@ const languageFlags: Record<Language, { src: string, alt: string }> = {
 
 function App() {
   const [offset, setOffset] = useState(0);
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>(detectLanguage());
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const t = translations[language];
 
